@@ -10,7 +10,7 @@ export default function Hero() {
         className="hero-orb pointer-events-none absolute right-12 top-1/3 h-4 w-4 rounded-full bg-white shadow-[0_0_40px_12px_rgba(255,255,255,0.35)] sm:right-24 sm:h-5 sm:w-5"
       />
 
-      <div className="relative mx-auto w-full max-w-[1600px] px-6 pb-14 pt-28 sm:px-12 sm:pb-20 sm:pt-36 lg:px-20">
+      <div className="relative mx-auto w-full max-w-[1600px] px-6 pb-14 pt-4 sm:px-12 sm:pb-20 sm:pt-6 lg:px-20">
         <Reveal className="flex flex-col items-center text-center">
           <h1 className="font-sans text-[12vw] font-extrabold leading-[0.88] tracking-tight text-[#f3efe4] sm:text-[10rem] md:text-[11.5rem] lg:text-[13rem]">
             Syed

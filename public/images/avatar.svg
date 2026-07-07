@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <defs>
     <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#52525b"/>
-      <stop offset="100%" stop-color="#27272a"/>
+      <stop offset="0%" stop-color="#71717a"/>
+      <stop offset="100%" stop-color="#3f3f46"/>
     </linearGradient>
     <clipPath id="frame">
       <rect width="400" height="400" rx="36"/>
@@ -25,22 +25,23 @@
     <ellipse cx="200" cy="212" rx="100" ry="106" fill="#d4d4d8"/>
 
     <!-- curly hair mass -->
-    <path d="M84 196
-             C68 96 132 30 200 30
-             C268 30 332 96 316 196
-             C316 150 292 140 280 156
-             C286 118 250 96 228 108
-             C224 84 176 84 172 108
-             C150 96 114 118 120 156
-             C108 140 84 150 84 196 Z" fill="#0c0c0d"/>
-    <circle cx="96" cy="150" r="24" fill="#0c0c0d"/>
-    <circle cx="128" cy="100" r="26" fill="#0c0c0d"/>
-    <circle cx="172" cy="70" r="26" fill="#0c0c0d"/>
-    <circle cx="228" cy="70" r="26" fill="#0c0c0d"/>
-    <circle cx="272" cy="100" r="26" fill="#0c0c0d"/>
-    <circle cx="304" cy="150" r="24" fill="#0c0c0d"/>
-    <circle cx="112" cy="188" r="18" fill="#0c0c0d"/>
-    <circle cx="288" cy="188" r="18" fill="#0c0c0d"/>
+    <path d="M74 200
+             C54 88 128 18 200 18
+             C272 18 346 88 326 200
+             C326 148 298 136 284 154
+             C292 110 252 84 226 98
+             C222 70 178 70 174 98
+             C148 84 108 110 116 154
+             C102 136 74 148 74 200 Z" fill="#0c0c0d"/>
+    <circle cx="82" cy="158" r="28" fill="#0c0c0d"/>
+    <circle cx="108" cy="102" r="30" fill="#0c0c0d"/>
+    <circle cx="152" cy="62" r="30" fill="#0c0c0d"/>
+    <circle cx="200" cy="46" r="30" fill="#0c0c0d"/>
+    <circle cx="248" cy="62" r="30" fill="#0c0c0d"/>
+    <circle cx="292" cy="102" r="30" fill="#0c0c0d"/>
+    <circle cx="318" cy="158" r="28" fill="#0c0c0d"/>
+    <circle cx="100" cy="196" r="20" fill="#0c0c0d"/>
+    <circle cx="300" cy="196" r="20" fill="#0c0c0d"/>
 
     <!-- raised eyebrow (right) -->
     <path d="M226 176 q22 -14 42 -4" fill="none" stroke="#0c0c0d" stroke-width="7" stroke-linecap="round"/>

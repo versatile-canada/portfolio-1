@@ -1,34 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <defs>
     <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#3f3f46"/>
+      <stop offset="0%" stop-color="#52525b"/>
       <stop offset="100%" stop-color="#27272a"/>
     </linearGradient>
+    <clipPath id="frame">
+      <rect width="400" height="400" rx="36"/>
+    </clipPath>
   </defs>
-  <rect width="400" height="400" rx="48" fill="url(#card)"/>
-  <!-- ears -->
-  <circle cx="100" cy="235" r="16" fill="#d4d4d8"/>
-  <circle cx="300" cy="235" r="16" fill="#d4d4d8"/>
-  <!-- face -->
-  <ellipse cx="200" cy="235" rx="98" ry="104" fill="#d4d4d8"/>
-  <!-- hair -->
-  <path d="M96 200
-           C88 120 140 60 200 60
-           C260 60 312 120 304 200
-           C304 160 276 150 260 168
-           C250 130 210 118 200 140
-           C190 118 150 130 140 168
-           C124 150 96 160 96 200 Z" fill="#18181b"/>
-  <circle cx="118" cy="150" r="20" fill="#18181b"/>
-  <circle cx="150" cy="112" r="22" fill="#18181b"/>
-  <circle cx="200" cy="96" r="24" fill="#18181b"/>
-  <circle cx="250" cy="112" r="22" fill="#18181b"/>
-  <circle cx="282" cy="150" r="20" fill="#18181b"/>
-  <!-- eyes -->
-  <path d="M150 232 q18 -14 36 0" fill="none" stroke="#18181b" stroke-width="7" stroke-linecap="round"/>
-  <path d="M214 232 q18 -14 36 0" fill="none" stroke="#18181b" stroke-width="7" stroke-linecap="round"/>
-  <!-- mouth -->
-  <path d="M180 278 q20 14 40 0" fill="none" stroke="#18181b" stroke-width="7" stroke-linecap="round"/>
-  <!-- shirt -->
-  <path d="M64 400 C64 330 122 316 200 316 C278 316 336 330 336 400 Z" fill="#52525b"/>
+  <rect width="400" height="400" rx="36" fill="url(#card)"/>
+
+  <g clip-path="url(#frame)">
+    <!-- shoulders / torso, flush to bottom edge -->
+    <path d="M0 400 L0 322 C90 268 310 268 400 322 L400 400 Z" fill="#0c0c0d"/>
+
+    <!-- neck -->
+    <rect x="176" y="252" width="48" height="48" fill="#d4d4d8"/>
+
+    <!-- ears -->
+    <circle cx="104" cy="212" r="17" fill="#d4d4d8"/>
+    <circle cx="296" cy="212" r="17" fill="#d4d4d8"/>
+
+    <!-- face -->
+    <ellipse cx="200" cy="212" rx="100" ry="106" fill="#d4d4d8"/>
+
+    <!-- curly hair mass -->
+    <path d="M84 196
+             C68 96 132 30 200 30
+             C268 30 332 96 316 196
+             C316 150 292 140 280 156
+             C286 118 250 96 228 108
+             C224 84 176 84 172 108
+             C150 96 114 118 120 156
+             C108 140 84 150 84 196 Z" fill="#0c0c0d"/>
+    <circle cx="96" cy="150" r="24" fill="#0c0c0d"/>
+    <circle cx="128" cy="100" r="26" fill="#0c0c0d"/>
+    <circle cx="172" cy="70" r="26" fill="#0c0c0d"/>
+    <circle cx="228" cy="70" r="26" fill="#0c0c0d"/>
+    <circle cx="272" cy="100" r="26" fill="#0c0c0d"/>
+    <circle cx="304" cy="150" r="24" fill="#0c0c0d"/>
+    <circle cx="112" cy="188" r="18" fill="#0c0c0d"/>
+    <circle cx="288" cy="188" r="18" fill="#0c0c0d"/>
+
+    <!-- raised eyebrow (right) -->
+    <path d="M226 176 q22 -14 42 -4" fill="none" stroke="#0c0c0d" stroke-width="7" stroke-linecap="round"/>
+    <!-- flat brow (left) -->
+    <path d="M132 182 q20 -6 40 0" fill="none" stroke="#0c0c0d" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- eyes, half-lidded -->
+    <path d="M140 208 q18 8 36 0" fill="none" stroke="#0c0c0d" stroke-width="7" stroke-linecap="round"/>
+    <path d="M224 208 q18 8 36 0" fill="none" stroke="#0c0c0d" stroke-width="7" stroke-linecap="round"/>
+
+    <!-- smirk -->
+    <path d="M168 254 q34 18 62 -2" fill="none" stroke="#0c0c0d" stroke-width="7" stroke-linecap="round"/>
+  </g>
 </svg>

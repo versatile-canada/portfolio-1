@@ -3,7 +3,7 @@ import { socials } from "@/lib/data";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50">
-      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-6 py-6 sm:px-12 lg:px-20">
+      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-6 py-5 sm:px-12 lg:px-20">
         <a
           href={socials.bookACall}
           target="_blank"

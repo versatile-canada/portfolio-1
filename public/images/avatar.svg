@@ -1,17 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#27272a"/>
-      <stop offset="100%" stop-color="#09090b"/>
-    </linearGradient>
-    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#a5b4fc"/>
-      <stop offset="100%" stop-color="#6366f1"/>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3f3f46"/>
+      <stop offset="100%" stop-color="#27272a"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="400" fill="url(#bg)"/>
-  <circle cx="200" cy="200" r="150" fill="none" stroke="url(#ring)" stroke-width="3" opacity="0.5"/>
-  <circle cx="200" cy="160" r="62" fill="#3f3f46"/>
-  <path d="M90 340c8-70 55-110 110-110s102 40 110 110" fill="#3f3f46"/>
-  <text x="50%" y="94%" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600" fill="#e4e4e7">SM</text>
+  <rect width="400" height="400" rx="48" fill="url(#card)"/>
+  <!-- ears -->
+  <circle cx="100" cy="235" r="16" fill="#d4d4d8"/>
+  <circle cx="300" cy="235" r="16" fill="#d4d4d8"/>
+  <!-- face -->
+  <ellipse cx="200" cy="235" rx="98" ry="104" fill="#d4d4d8"/>
+  <!-- hair -->
+  <path d="M96 200
+           C88 120 140 60 200 60
+           C260 60 312 120 304 200
+           C304 160 276 150 260 168
+           C250 130 210 118 200 140
+           C190 118 150 130 140 168
+           C124 150 96 160 96 200 Z" fill="#18181b"/>
+  <circle cx="118" cy="150" r="20" fill="#18181b"/>
+  <circle cx="150" cy="112" r="22" fill="#18181b"/>
+  <circle cx="200" cy="96" r="24" fill="#18181b"/>
+  <circle cx="250" cy="112" r="22" fill="#18181b"/>
+  <circle cx="282" cy="150" r="20" fill="#18181b"/>
+  <!-- eyes -->
+  <path d="M150 232 q18 -14 36 0" fill="none" stroke="#18181b" stroke-width="7" stroke-linecap="round"/>
+  <path d="M214 232 q18 -14 36 0" fill="none" stroke="#18181b" stroke-width="7" stroke-linecap="round"/>
+  <!-- mouth -->
+  <path d="M180 278 q20 14 40 0" fill="none" stroke="#18181b" stroke-width="7" stroke-linecap="round"/>
+  <!-- shirt -->
+  <path d="M64 400 C64 330 122 316 200 316 C278 316 336 330 336 400 Z" fill="#52525b"/>
 </svg>

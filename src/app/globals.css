@@ -3,6 +3,8 @@
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
+@import "@fontsource/inter/800.css";
+@import "@fontsource/inter/900.css";
 @import "@fontsource/instrument-serif/400.css";
 @import "@fontsource/instrument-serif/400-italic.css";
 
@@ -58,4 +60,21 @@ a {
 
 .animate-marquee {
   animation: marquee 40s linear infinite;
+}
+
+.hero-panel {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 15%, rgba(255, 255, 255, 0.1), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(120, 120, 140, 0.12), transparent 60%),
+    #0b0b0d;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

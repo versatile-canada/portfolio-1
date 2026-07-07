@@ -3,12 +3,12 @@ import { socials } from "@/lib/data";
 export default function Header() {
   return (
     <header className="sticky top-0 z-50">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6 sm:px-8">
+      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between px-6 py-6 sm:px-12 lg:px-20">
         <a
           href={socials.bookACall}
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-foreground/80 px-4 py-2 text-xs font-medium tracking-wide text-foreground transition-colors hover:bg-foreground hover:text-background"
+          className="rounded-full border-2 border-foreground/90 px-5 py-2.5 text-xs font-semibold tracking-wide text-foreground transition-colors hover:bg-foreground hover:text-background"
         >
           BOOK A CALL
         </a>

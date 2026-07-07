@@ -4,42 +4,43 @@ import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-6 pt-16 pb-20 sm:px-8 sm:pt-24">
-      <Reveal>
-        <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center">
-          <Image
-            src="/images/avatar.svg"
-            alt="Syed Moinuddin"
-            width={112}
-            height={112}
-            className="h-24 w-24 shrink-0 rounded-full ring-1 ring-border sm:h-28 sm:w-28"
-            priority
-          />
-          <div>
-            <h1 className="font-serif text-5xl italic leading-none text-foreground sm:text-6xl">
-              Syed
-              <br />
-              Moinuddin
-            </h1>
-          </div>
-        </div>
-      </Reveal>
+    <section id="top" className="hero-panel relative overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-10 top-24 h-24 w-24 rounded-full bg-zinc-300/25 blur-2xl sm:right-24 sm:h-32 sm:w-32"
+      />
 
-      <Reveal delay={0.1} className="mt-8 max-w-2xl space-y-3 text-lg text-muted">
-        <p>
-          I currently work as a Frontend Engineer at{" "}
-          <a
-            href={socials.virallens}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent underline decoration-accent/40 hover:text-foreground"
-          >
-            Virallens
-          </a>
-          , currently available for work.
-        </p>
-        <p>Focused on interfaces and experiences, working remotely from Bangalore, India.</p>
-      </Reveal>
+      <div className="relative mx-auto max-w-5xl px-6 pb-16 pt-28 sm:px-8 sm:pb-20 sm:pt-36">
+        <Reveal className="flex flex-col items-center text-center">
+          <h1 className="font-sans text-[15vw] font-extrabold leading-[1.05] tracking-tight text-[#f3efe4] sm:text-8xl md:text-9xl">
+            Syed
+          </h1>
+          <div className="relative z-10 -my-1 h-24 w-24 shrink-0 overflow-hidden rounded-2xl ring-1 ring-white/10 sm:-my-2 sm:h-32 sm:w-32 md:h-36 md:w-36">
+            <Image src="/images/avatar.svg" alt="Syed Moinuddin" fill priority className="object-cover" />
+          </div>
+          <h1 className="font-sans text-[15vw] font-extrabold leading-[1.05] tracking-tight text-[#f3efe4] sm:text-8xl md:text-9xl">
+            Moinuddin
+          </h1>
+        </Reveal>
+
+        <Reveal delay={0.1} className="mt-14 grid gap-4 text-base text-muted sm:mt-16 sm:grid-cols-2 sm:gap-8 sm:text-lg">
+          <p className="text-center sm:text-left">
+            I currently work as a Frontend Engineer at{" "}
+            <a
+              href={socials.virallens}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent underline decoration-accent/40 hover:text-foreground"
+            >
+              Virallens
+            </a>
+            , currently available for work.
+          </p>
+          <p className="text-center sm:text-right">
+            Focused on interfaces and experiences, working remotely from Bangalore, India.
+          </p>
+        </Reveal>
+      </div>
     </section>
   );
 }

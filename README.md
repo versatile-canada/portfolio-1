@@ -27,3 +27,14 @@ npm run start
 ```bash
 node scripts/gen-images.mjs
 ```
+
+## AI image/video generation (Masonry)
+
+This repo has the [Masonry CLI](https://masonry.so/cli) as a dev dependency, plus its Claude Code skills (`.claude/skills/masonry*`) so Claude Code can generate or edit imagery on request.
+
+```bash
+npx masonry login                       # one-time browser auth
+npx masonry image "your prompt" --aspect 16:9
+```
+
+Run `npx masonry --help` for the full command list (video, canvas, jobs, models, history).

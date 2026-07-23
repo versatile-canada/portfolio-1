@@ -1,185 +1,294 @@
 export const socials = {
-  email: "mailto:hello@syedmoinuddin.dev",
-  bookACall: "https://cal.com/syedmoinuddin",
-  linkedin: "https://linkedin.com/in/syedmoinuddin",
-  github: "https://github.com/syedmoinuddin",
-  zenithStudio: "https://zenithstudio.dev",
-  virallens: "https://virallens.com",
+  email: "mailto:hello@versatile.agency",
+  bookACall: "https://cal.com/versatile-agency",
+  linkedin: "https://linkedin.com/company/versatile-agency",
+  instagram: "https://instagram.com/versatile.agency",
 };
 
-export const skillGroups = [
-  {
-    title: "Frontend Tools",
-    items: [
-      "JavaScript (ES6+)",
-      "React",
-      "Next.js",
-      "TypeScript",
-      "Prismic CMS",
-      "Redux",
-      "Redux Toolkit",
-      "React Testing Library",
-      "Vitest",
-      "HTML5",
-      "Git/GitHub",
-      "NextAuth",
-      "Formik",
-    ],
-  },
-  {
-    title: "Backend Tools",
-    items: [
-      "Node.js",
-      "Express.js",
-      "Supabase",
-      "Firebase",
-      "Prisma ORM",
-      "PlanetScale",
-      "REST APIs",
-      "PostgreSQL",
-      "MongoDB",
-      "Stripe Integration",
-    ],
-  },
-  {
-    title: "UI Libraries",
-    items: [
-      "CSS3/SCSS/SASS",
-      "Tailwind CSS",
-      "Material UI",
-      "Framer Motion",
-      "GSAP",
-      "Bootstrap",
-      "Chart.js",
-    ],
-  },
+export const navLinks = [
+  { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
+  { label: "Process", href: "#process" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Contact", href: "#contact" },
 ];
 
-export const recommendedTracks = [
-  { artist: "Amy Winehouse", title: "Back To Black", art: "/images/music/black-to-back.svg" },
-  { artist: "Chezile", title: "Beanie Song", art: "/images/music/beanie-song.svg" },
-  { artist: "Portugal. The Man", title: "Feel It Still", art: "/images/music/feel-it-still.svg" },
-  { artist: "Selena Gomez", title: "Feel Me", art: "/images/music/feel-me.svg" },
-  { artist: "The Weeknd", title: "I Was Never There", art: "/images/music/i-was-never-there.svg" },
-  { artist: "Kendrick Lamar", title: "Not Like Us", art: "/images/music/not-like-us.svg" },
-  { artist: "NF", title: "When I Grow Up", art: "/images/music/when-i-grow-up.svg" },
-  { artist: "Chord Overstreet", title: "Hold On", art: "/images/music/hold-on.svg" },
-  { artist: "Adele", title: "Easy On Me", art: "/images/music/easy-on-me.svg" },
+export const industries = [
+  "Roofing & Exteriors",
+  "Plumbing & HVAC",
+  "Electrical Contracting",
+  "Construction & Remodeling",
+  "Law Firms",
+  "Accounting & Finance",
+  "Dental & Medical",
+  "Consulting",
+  "Real Estate",
+  "Home Services",
 ];
 
-export type Project = {
+export type Service = {
   title: string;
   description: string;
+  icon: string;
+};
+
+export const services: Service[] = [
+  {
+    title: "Brand & Strategy",
+    description:
+      "Positioning, messaging, and visual identity that make a contracting crew or a corner-office firm equally impossible to ignore.",
+    icon: "Compass",
+  },
+  {
+    title: "Premium Web Design",
+    description:
+      "Editorial-grade layouts built to earn trust in the first three seconds — whether the visitor needs a roof or a retainer.",
+    icon: "PenTool",
+  },
+  {
+    title: "Development",
+    description:
+      "Fast, resilient builds on modern frameworks. No bloated templates — every site is hand-built and stress-tested.",
+    icon: "Code2",
+  },
+  {
+    title: "Conversion Optimization",
+    description:
+      "Forms, funnels, and call-tracking tuned so traffic turns into quote requests, consultations, and booked jobs.",
+    icon: "TrendingUp",
+  },
+  {
+    title: "Local & Organic Search",
+    description:
+      "Technical SEO and local-map optimization built for how blue-collar and white-collar clients actually get found.",
+    icon: "Search",
+  },
+  {
+    title: "Care & Growth Plans",
+    description:
+      "Ongoing updates, uptime monitoring, and quarterly performance reviews so the site keeps compounding after launch.",
+    icon: "ShieldCheck",
+  },
+];
+
+export type ProcessStep = {
+  step: string;
+  title: string;
+  description: string;
+};
+
+export const processSteps: ProcessStep[] = [
+  {
+    step: "01",
+    title: "Discovery Call",
+    description:
+      "We learn your trade or practice, your customers, and what's actually costing you leads today.",
+  },
+  {
+    step: "02",
+    title: "Strategy & Sitemap",
+    description:
+      "A conversion-first blueprint mapped to how blue- and white-collar buyers actually decide.",
+  },
+  {
+    step: "03",
+    title: "Design Concept",
+    description:
+      "A premium visual direction — bold typography, restrained motion, a brand you'd be proud to hand a client.",
+  },
+  {
+    step: "04",
+    title: "Build & Development",
+    description:
+      "Hand-coded, mobile-first, and fast — every animation and interaction production-tested before it ships.",
+  },
+  {
+    step: "05",
+    title: "QA & Launch",
+    description:
+      "Cross-device QA, tracking installed, forms fire-tested, then a clean, zero-downtime launch.",
+  },
+  {
+    step: "06",
+    title: "Grow & Optimize",
+    description:
+      "We watch the numbers post-launch and keep refining the pages that turn visits into revenue.",
+  },
+];
+
+export type CaseStudy = {
+  title: string;
+  industry: string;
+  description: string;
   tags: string[];
+  result: string;
   image: string;
   decor?: string;
   decorSide?: "left" | "right";
-  github?: string;
   link?: string;
 };
 
-export const projects: Project[] = [
+export const caseStudies: CaseStudy[] = [
   {
-    title: "AyoRemi",
+    title: "Ironclad Roofing",
+    industry: "Roofing & Exteriors",
     description:
-      "This is a modern e-commerce website designed as a replica of the United Store platform, featuring full SEO optimization, improved performance, and built using WordPress, Next.js, and TypeScript.",
-    tags: ["React", "TailwindCSS", "FramerMotion"],
-    image: "/images/projects/ayoremi.svg",
-    decor: "/images/decor/cloth.svg",
+      "A rebuild that replaced a dated brochure site with an estimate-first experience built around storm-damage urgency.",
+    tags: ["Web Design", "Development", "Local SEO"],
+    result: "+186% quote requests in 90 days",
+    image: "/images/projects/ironclad-roofing.svg",
+    decor: "/images/decor/helmet.svg",
     decorSide: "right",
-    github: "https://github.com/syedmoinuddin/ayoremi",
     link: "#",
   },
   {
-    title: "MechX-AI",
+    title: "Meridian Law Group",
+    industry: "Law Firm",
     description:
-      "This is a next-generation engineering platform designed to automate mechanical tasks, offering breakthrough projects, ready-to-use solutions, and collaboration opportunities for building future mechatronics innovations.",
-    tags: ["React", "TailwindCSS", "FramerMotion"],
-    image: "/images/projects/mechx-ai.svg",
-    decor: "/images/decor/mechx.svg",
+      "An editorial, trust-driven site for a civil litigation firm, rebuilt around case results and consultation booking.",
+    tags: ["Brand", "Web Design", "CRO"],
+    result: "+92% consultation bookings",
+    image: "/images/projects/meridian-law.svg",
+    decor: "/images/decor/scale.svg",
     decorSide: "left",
-    github: "https://github.com/syedmoinuddin/mechx-ai",
     link: "#",
   },
   {
-    title: "ZenithSolar",
+    title: "Apex Plumbing & HVAC",
+    industry: "Home Services",
     description:
-      "This is a landing page created for a solar energy company to strengthen their digital presence and showcase innovative solutions for capturing, storing, and utilizing solar power.",
-    tags: ["React", "Next.js", "GSAP"],
-    image: "/images/projects/zenithsolar.svg",
-    github: "https://github.com/syedmoinuddin/zenithsolar",
+      "A same-day-service site with call-tracking and a service-area funnel tuned for emergency search traffic.",
+    tags: ["Development", "Local SEO", "CRO"],
+    result: "3.2x organic local leads",
+    image: "/images/projects/apex-plumbing.svg",
     link: "#",
   },
   {
-    title: "NovaSolar",
+    title: "Sterling & Cole CPA",
+    industry: "Accounting & Finance",
     description:
-      "This is a landing page developed for Solaynova to showcase their innovative clean energy solutions, empowering homes, businesses, and communities to thrive sustainably.",
-    tags: ["Next.js", "Typescript", "Prisma"],
-    image: "/images/projects/novasolar.svg",
-    github: "https://github.com/syedmoinuddin/novasolar",
+      "A refined, credibility-first site for a boutique accounting firm targeting high-value business clients.",
+    tags: ["Brand", "Web Design"],
+    result: "+64% new client inquiries",
+    image: "/images/projects/sterling-cole.svg",
     link: "#",
   },
   {
-    title: "QuantumDock",
+    title: "Brightline Electrical",
+    industry: "Electrical Contracting",
     description:
-      "This is a website for an AI startup designed to present cutting-edge AI-driven data processing solutions, enabling seamless integration with multiple providers, workflow automation, and data unification.",
-    tags: ["Next.js", "Typescript", "Prisma"],
-    image: "/images/projects/quantumdock.svg",
-    github: "https://github.com/syedmoinuddin/quantumdock",
+      "A mobile-first rebuild for a residential and commercial electrical contractor, optimized for on-site search.",
+    tags: ["Development", "CRO"],
+    result: "+210% mobile conversion rate",
+    image: "/images/projects/brightline-electrical.svg",
     link: "#",
   },
   {
-    title: "Dev-Creations",
+    title: "Harbor Dental Group",
+    industry: "Dental & Medical",
     description:
-      "This is a website redesign for Dev-Creations, where I utilized modern tech stacks and applied my own UI/UX design knowledge to create a more contemporary, user-friendly look and feel.",
-    tags: ["Next.js", "Typescript", "Prisma"],
-    image: "/images/projects/dev-creations.svg",
-    github: "https://github.com/syedmoinuddin/dev-creations",
+      "A calm, premium patient experience with real-time appointment requests across three clinic locations.",
+    tags: ["Web Design", "Development", "Local SEO"],
+    result: "+78% appointment requests",
+    image: "/images/projects/harbor-dental.svg",
     link: "#",
+  },
+];
+
+export type PricingTier = {
+  name: string;
+  price: string;
+  cadence: string;
+  description: string;
+  features: string[];
+  featured?: boolean;
+};
+
+export const pricingTiers: PricingTier[] = [
+  {
+    name: "Launch",
+    price: "$4,500",
+    cadence: "one-time",
+    description: "For single-location trades and firms who need a premium site, fast.",
+    features: [
+      "5-page premium, mobile-first site",
+      "Custom brand-aligned design",
+      "Quote / consultation request forms",
+      "On-page SEO foundation",
+      "30-day post-launch support",
+    ],
+  },
+  {
+    name: "Growth",
+    price: "$8,500",
+    cadence: "one-time",
+    description: "Our most popular package — built to actively convert and compound.",
+    features: [
+      "Everything in Launch",
+      "Conversion-optimized funnels & CRO",
+      "Local SEO & map-pack optimization",
+      "CRM / booking system integration",
+      "Quarterly performance reporting",
+      "90-day post-launch support",
+    ],
+    featured: true,
+  },
+  {
+    name: "Enterprise",
+    price: "Custom",
+    cadence: "quoted",
+    description: "For multi-location operators and franchises with complex needs.",
+    features: [
+      "Everything in Growth",
+      "Multi-location landing page system",
+      "Custom web app features",
+      "Dedicated strategist & priority support",
+      "Ongoing care & growth plan",
+    ],
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "One thing that truly stood out while working with Syed is his incredible speed. He has a rare ability to spin up clean, functional landing pages in no time. Whether it's a quick iteration or a fresh build, you can always count on Zenith Studio to deliver with speed and precision.",
-    name: "Abhinav",
-    role: "CEO @ CallKaro AI",
-    avatar: "/images/testimonials/abhinav.svg",
+      "Versatile rebuilt our site in three weeks and our phones haven't stopped ringing since. They understood roofing customers better than we did.",
+    name: "Marcus Ridley",
+    role: "Owner @ Ironclad Roofing",
+    avatar: "/images/testimonials/marcus.svg",
   },
   {
     quote:
-      "Working with Syed was seamless. I came with just an idea, and he turned it into a sleek, high-performing eCommerce site. He handled everything—from design to development—while keeping me in the loop. Highly recommend him and the Zenith Studio team for turning vague visions into real products.",
-    name: "Ayo",
-    role: "Software Developer @ Freelance",
-    avatar: "/images/testimonials/ayo.svg",
+      "Every other agency treated us like a generic small business. Versatile designed a site that actually reflects the caliber of firm we are.",
+    name: "Elena Marsh",
+    role: "Managing Partner @ Meridian Law Group",
+    avatar: "/images/testimonials/elena.svg",
   },
   {
     quote:
-      "I wanted a platform that captured my journey and love for Urdu — Syed delivered exactly that. The portfolio feels personal, professional, and culturally respectful. Grateful for the care and creativity he brought to the entire process.",
-    name: "Ifranulla",
-    role: "Content Creator @ Independent",
-    avatar: "/images/testimonials/ifranulla.svg",
+      "We went from a Wix site nobody trusted to a booking system that fills our schedule. Best investment we've made in the business.",
+    name: "Tony DiFranco",
+    role: "Owner @ Apex Plumbing & HVAC",
+    avatar: "/images/testimonials/tony.svg",
   },
   {
     quote:
-      "Syed built a vibrant landing page for our product launch — fast, responsive, and exactly to the brief. His ability to understand brand voice and turn it into a clean website experience is unmatched.",
-    name: "Neha",
-    role: "Marketing Manager @ GlowWave Media",
-    avatar: "/images/testimonials/neha.svg",
+      "Sharp, fast, and they actually listened. New client inquiries are up significantly and the site finally looks like the firm we've built.",
+    name: "Priya Sterling",
+    role: "Partner @ Sterling & Cole CPA",
+    avatar: "/images/testimonials/priya.svg",
   },
   {
     quote:
-      "Zenith Studio helped us move from a basic idea to a polished SaaS landing page in record time. Syed's suggestions on layout, flow, and CTAs clearly show he understands not just design but real conversion strategies.",
-    name: "Rohan",
-    role: "Founder @ Bloom Analytics",
-    avatar: "/images/testimonials/rohan.svg",
+      "The mobile experience alone paid for the project. Most of our calls come from someone standing in front of a breaker box.",
+    name: "Jamal Brightline",
+    role: "Founder @ Brightline Electrical",
+    avatar: "/images/testimonials/jamal.svg",
   },
   {
     quote:
-      "Working with Syed was stress-free and efficient. He took ownership of the project, communicated regularly, and delivered a stunning landing page that now serves as the face of our brand online.",
-    name: "Aditi",
-    role: "Operations Lead @ CraftNest",
-    avatar: "/images/testimonials/aditi.svg",
+      "Patients tell us the new site is the reason they picked us over the practice down the street. That's not something we expected from a website.",
+    name: "Dr. Wren Harbor",
+    role: "Clinical Director @ Harbor Dental Group",
+    avatar: "/images/testimonials/wren.svg",
   },
 ];

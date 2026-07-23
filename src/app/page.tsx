@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import SocialProof from "@/components/SocialProof";
 import Statement from "@/components/Statement";
-import About from "@/components/About";
-import MusicTicker from "@/components/MusicTicker";
-import Projects from "@/components/Projects";
-import Partner from "@/components/Partner";
+import Features from "@/components/Features";
+import Timeline from "@/components/Timeline";
+import Work from "@/components/Work";
+import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Contact, { Footer } from "@/components/Contact";
 
@@ -14,11 +15,12 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <SocialProof />
         <Statement />
-        <About />
-        <MusicTicker />
-        <Projects />
-        <Partner />
+        <Features />
+        <Timeline />
+        <Work />
+        <Pricing />
         <Testimonials />
         <Contact />
       </main>

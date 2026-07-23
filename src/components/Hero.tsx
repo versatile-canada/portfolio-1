@@ -1,47 +1,83 @@
-import Image from "next/image";
+"use client";
+
+import { useRef, type CSSProperties, type MouseEvent } from "react";
 import { socials } from "@/lib/data";
 import Reveal from "./Reveal";
+import MagneticButton from "./MagneticButton";
+
+const stats = [
+  { value: "40+", label: "Sites launched" },
+  { value: "4.9/5", label: "Average client rating" },
+  { value: "2 wks", label: "Avg. turnaround" },
+];
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  function handleMouseMove(e: MouseEvent<HTMLElement>) {
+    const rect = sectionRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    sectionRef.current?.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+    sectionRef.current?.style.setProperty("--my", `${e.clientY - rect.top}px`);
+  }
+
   return (
-    <section id="top" className="hero-panel relative overflow-hidden">
+    <section
+      id="top"
+      ref={sectionRef}
+      onMouseMove={handleMouseMove}
+      className="hero-panel relative isolate overflow-hidden pb-24 pt-40 sm:pb-32 sm:pt-48"
+      style={{ "--mx": "50%", "--my": "30%" } as CSSProperties}
+    >
+      <div aria-hidden className="hero-grid" />
+      <div aria-hidden className="hero-spotlight" />
       <div
         aria-hidden
-        className="hero-orb pointer-events-none absolute right-12 top-1/3 h-4 w-4 rounded-full bg-white shadow-[0_0_40px_12px_rgba(255,255,255,0.35)] sm:right-24 sm:h-5 sm:w-5"
+        className="hero-orb pointer-events-none absolute right-10 top-1/4 h-3 w-3 rounded-full bg-accent-bright shadow-[0_0_40px_14px_rgba(243,205,92,0.35)] sm:right-24 sm:h-4 sm:w-4"
       />
 
-      <div className="relative mx-auto w-full max-w-[1600px] px-6 pb-14 pt-4 sm:px-12 sm:pb-20 sm:pt-6 lg:px-20">
-        <Reveal className="flex flex-col items-center text-center">
-          <h1 className="font-sans text-[12vw] font-extrabold leading-[0.88] tracking-tight text-[#f3efe4] sm:text-[10rem] md:text-[11.5rem] lg:text-[13rem]">
-            Syed
-          </h1>
-          <div className="relative z-10 mt-1 -mb-5 h-16 w-16 shrink-0 overflow-hidden rounded-2xl ring-1 ring-white/10 sm:mt-3 sm:-mb-16 sm:h-44 sm:w-44 md:h-52 md:w-52">
-            <Image src="/images/avatar.svg" alt="Syed Moinuddin" fill priority className="object-cover" />
-          </div>
-          <h1 className="font-sans text-[12vw] font-extrabold leading-[0.88] tracking-tight text-[#f3efe4] sm:text-[10rem] md:text-[11.5rem] lg:text-[13rem]">
-            Moinuddin
+      <div className="relative mx-auto w-full max-w-[1200px] px-6 text-center sm:px-12 lg:px-20">
+        <Reveal>
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.03] px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-muted">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Premium Web Design &amp; Development
+          </span>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <h1 className="mt-8 font-sans text-[13vw] font-extrabold leading-[0.92] tracking-tight text-foreground sm:text-[6.5rem] md:text-[7.5rem] lg:text-[8.5rem]">
+            Websites Built
+            <br />
+            To{" "}
+            <span className="font-serif italic font-normal text-accent-bright text-glow">
+              Convert.
+            </span>
           </h1>
         </Reveal>
 
-        <Reveal
-          delay={0.1}
-          className="mt-14 flex flex-col gap-6 sm:mt-20 sm:flex-row sm:items-start sm:justify-between sm:gap-8"
-        >
-          <p className="max-w-sm text-base font-medium text-foreground sm:text-lg">
-            I currently work as a Frontend Engineer at{" "}
-            <a
-              href={socials.virallens}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-accent underline decoration-accent/40 hover:text-foreground"
-            >
-              Virallens
-            </a>
-            , currently available for work.
+        <Reveal delay={0.2}>
+          <p className="mx-auto mt-8 max-w-xl text-base text-muted sm:text-lg">
+            Versatile designs and builds high-converting websites for blue-collar trades and
+            white-collar firms — sites that win the call before your competitor even answers.
           </p>
-          <p className="max-w-sm text-base font-medium text-foreground sm:text-right sm:text-lg">
-            Focused on interfaces and experiences, working remotely from Bangalore, India.
-          </p>
+        </Reveal>
+
+        <Reveal delay={0.3} className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <MagneticButton href={socials.bookACall} target="_blank" rel="noopener noreferrer" variant="primary">
+            Get a Free Quote
+          </MagneticButton>
+          <MagneticButton href="#work" variant="secondary">
+            See Our Work
+          </MagneticButton>
+        </Reveal>
+
+        <Reveal delay={0.4} className="mx-auto mt-16 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8">
+          {stats.map((stat) => (
+            <div key={stat.label}>
+              <p className="font-serif text-3xl italic text-foreground sm:text-4xl">{stat.value}</p>
+              <p className="mt-1 text-xs text-muted">{stat.label}</p>
+            </div>
+          ))}
         </Reveal>
       </div>
     </section>

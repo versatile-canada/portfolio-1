@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Syed Moinuddin — Frontend Engineer",
+  title: "Versatile — Premium Web Design & Development Agency",
   description:
-    "I build startups, accelerate growth, create empires. Frontend Engineer specializing in high-converting landing pages and web apps for SaaS, Web3 & AI startups.",
+    "Versatile designs and builds high-converting, premium websites for blue-collar trades and white-collar firms — sites that win the call before your competitor even answers.",
 };
 
 export default function RootLayout({

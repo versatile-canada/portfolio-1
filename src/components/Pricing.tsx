@@ -24,7 +24,7 @@ export default function Pricing() {
               className={clsx(
                 "glow-border relative flex h-full flex-col rounded-3xl border p-8 transition-transform hover:-translate-y-1",
                 tier.featured
-                  ? "border-accent/50 bg-gradient-to-b from-accent/[0.08] to-transparent shadow-[0_0_60px_-15px_rgba(212,175,55,0.35)] lg:scale-105"
+                  ? "border-accent/50 bg-gradient-to-b from-accent/[0.08] to-transparent shadow-[0_0_60px_-15px_rgba(189,134,15,0.4)] lg:scale-105"
                   : "border-border bg-white/[0.03]"
               )}
             >

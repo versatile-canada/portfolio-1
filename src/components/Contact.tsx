@@ -11,7 +11,7 @@ export default function Contact() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 60% at 50% 0%, rgba(212,175,55,0.12), transparent 65%)",
+            "radial-gradient(ellipse 60% 60% at 50% 0%, rgba(189,134,15,0.14), transparent 65%)",
         }}
       />
       <div className="relative mx-auto max-w-4xl px-6 py-24 text-center sm:px-8 sm:py-32">

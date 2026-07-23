@@ -33,7 +33,7 @@ export default function Hero() {
       <div aria-hidden className="hero-spotlight" />
       <div
         aria-hidden
-        className="hero-orb pointer-events-none absolute right-10 top-1/4 h-3 w-3 rounded-full bg-accent-bright shadow-[0_0_40px_14px_rgba(243,205,92,0.35)] sm:right-24 sm:h-4 sm:w-4"
+        className="hero-orb pointer-events-none absolute right-10 top-1/4 h-3 w-3 rounded-full bg-accent-bright shadow-[0_0_40px_14px_rgba(224,168,58,0.35)] sm:right-24 sm:h-4 sm:w-4"
       />
 
       <div className="relative mx-auto w-full max-w-[1200px] px-6 text-center sm:px-12 lg:px-20">
